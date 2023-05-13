@@ -9,7 +9,9 @@ import com.example.newsapi.databinding.ActivitySourceBinding
 import com.example.newsapi.databinding.ItemSourceBinding
 import com.example.newsapi.view.adapter.SourceAdapter
 import com.example.newsapi.viewmodel.SourceViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SourceActivity : AppCompatActivity() {
     lateinit var binding : ActivitySourceBinding
     lateinit var sourceAdapter : SourceAdapter
