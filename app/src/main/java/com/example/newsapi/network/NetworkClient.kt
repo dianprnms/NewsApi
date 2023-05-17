@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @Module
 @InstallIn(SingletonComponent::class)
 object NetworkClient {
-    const val  BASE_URL ="https://newsapi.org/v2/"
+    private const val  BASE_URL ="https://newsapi.org/v2/"
 
 //    val instance : ApiService by lazy {
 //        val retrofit= Retrofit.Builder()

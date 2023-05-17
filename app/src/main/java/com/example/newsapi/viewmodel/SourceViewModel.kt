@@ -1,14 +1,12 @@
 package com.example.newsapi.viewmodel
 
 import android.content.ContentValues.TAG
-import android.content.Context
 import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.newsapi.model.ResponseDataSource
 import com.example.newsapi.model.Source
 import com.example.newsapi.network.ApiService
-import com.example.newsapi.network.NetworkClient
 import dagger.hilt.android.lifecycle.HiltViewModel
 import retrofit2.Call
 import retrofit2.Callback
@@ -16,13 +14,9 @@ import retrofit2.Response
 import javax.inject.Inject
 
 @HiltViewModel
-class SourceViewModel @Inject constructor(var api : ApiService) : ViewModel() {
+class SourceViewModel @Inject constructor(private var api : ApiService) : ViewModel() {
 
-    lateinit var liveDataSource : MutableLiveData<List<Source>?>
-
-    init {
-        liveDataSource = MutableLiveData()
-    }
+    var liveDataSource : MutableLiveData<List<Source>?> = MutableLiveData()
 
     fun getDataSource(): MutableLiveData<List<Source>?> {
         return  liveDataSource

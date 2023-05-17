@@ -1,7 +1,6 @@
 package com.example.newsapi.network
 
 import com.example.newsapi.model.ResponseDataSource
-import com.example.newsapi.model.Source
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Query
